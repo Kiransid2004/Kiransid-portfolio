@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiran Siddarth — AI & ML Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Kiran Siddarth – AI & ML Engineer specializing in LLM-powered chatbots, NLP pipelines, and Python development." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <span class="prompt">kiran</span><span class="at">@</span><span class="path">portfolio</span><span
+          class="prompt">:~$</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">./about</a></li>
+        <li><a href="#skills">./skills</a></li>
+        <li><a href="#projects">./projects</a></li>
+        <li><a href="#education">./education</a></li>
+        <li><a href="#certifications">./certs</a></li>
+        <li><a href="#contact">./contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <!-- Animated grid -->
+    <div class="hero-grid-bg"></div>
+    <!-- Neural network nodes -->
+    <div class="hero-node" style="top:10%;left:25%"></div>
+    <div class="hero-node"></div>
+    <div class="hero-node"></div>
+    <div class="hero-node"></div>
+    <div class="hero-node"></div>
+    <div class="hero-node"></div>
+    <div class="hero-node"></div>
+    <div class="hero-node"></div>
+    <!-- Gradient orbs -->
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <!-- Terminal window -->
+        <div class="hero-terminal terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dot red"></div>
+            <div class="terminal-dot yellow"></div>
+            <div class="terminal-dot green"></div>
+            <span class="terminal-title">kiran@ubuntu: ~/portfolio</span>
+          </div>
+          <div class="terminal-body">
+            <div class="hero-prompt">
+              <span class="user">kiran</span><span class="at">@</span><span class="host">ubuntu</span>:<span
+                class="dir">~/portfolio</span>$ <span class="cmd">cat intro.json</span>
+            </div>
+
+            <h1 class="hero-output-name">
+              Hi, I'm <span class="glow">Kiran Siddarth</span>
+            </h1>
+            <p class="hero-tagline">
+              &gt; <span id="typed-text"></span><span class="typed-cursor">█</span>
+            </p>
+            <p class="hero-desc">
+              <span class="comment">// Crafting intelligent systems that think, learn, and adapt.</span><br />
+              <span class="comment">// Fueled by curiosity, Python, and endless coffee.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">
+            <i data-lucide="terminal" style="width:16px;height:16px"></i> ./contact_me
+          </a>
+          <a href="#projects" class="btn btn-outline">
+            <i data-lucide="folder-open" style="width:16px;height:16px"></i> ls ./projects
+          </a>
+          <a href="https://github.com/Kiransid2004" target="_blank" rel="noopener" class="btn btn-outline">
+            <i data-lucide="github" style="width:16px;height:16px"></i> git clone
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value">4+</div>
+            <div class="hero-stat-label">// projects</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">4</div>
+            <div class="hero-stat-label">// certifications</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">B.Tech</div>
+            <div class="hero-stat-label">// AI & ML</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TERMINAL NAVIGATOR ========== -->
+  <section class="terminal-nav" id="terminal-nav">
+    <div class="container">
+      <div class="terminal-window terminal-nav-window reveal">
+        <div class="terminal-header">
+          <div class="terminal-dot red"></div>
+          <div class="terminal-dot yellow"></div>
+          <div class="terminal-dot green"></div>
+          <span class="terminal-title">kiran@ubuntu: ~/portfolio — Navigation Terminal</span>
+        </div>
+        <div class="terminal-body">
+          <!-- Welcome message -->
+          <div class="tnav-welcome">
+            <span class="tnav-comment">## ========================================</span><br />
+            <span class="tnav-comment">## Welcome to Kiran's Portfolio Terminal</span><br />
+            <span class="tnav-comment">## Type a command or click to navigate</span><br />
+            <span class="tnav-comment">## ========================================</span>
+          </div>
+
+          <!-- Command list -->
+          <div class="tnav-commands">
+            <div class="tnav-cmd" data-target="about" data-cmd="cat ./about.md">
+              <span class="tnav-index">01</span>
+              <span class="tnav-arrow">→</span>
+              <span class="tnav-text">cat <span class="tnav-file">./about.md</span></span>
+              <span class="tnav-desc">— Who am I?</span>
+            </div>
+            <div class="tnav-cmd" data-target="skills" data-cmd="pip list --skills">
+              <span class="tnav-index">02</span>
+              <span class="tnav-arrow">→</span>
+              <span class="tnav-text">pip list <span class="tnav-flag">--skills</span></span>
+              <span class="tnav-desc">— My tech stack</span>
+            </div>
+            <div class="tnav-cmd" data-target="projects" data-cmd="ls -la ~/projects/">
+              <span class="tnav-index">03</span>
+              <span class="tnav-arrow">→</span>
+              <span class="tnav-text">ls -la <span class="tnav-file">~/projects/</span></span>
+              <span class="tnav-desc">— Things I've built</span>
+            </div>
+            <div class="tnav-cmd" data-target="education" data-cmd="git log --education">
+              <span class="tnav-index">04</span>
+              <span class="tnav-arrow">→</span>
+              <span class="tnav-text">git log <span class="tnav-flag">--education</span></span>
+              <span class="tnav-desc">— Academic journey</span>
+            </div>
+            <div class="tnav-cmd" data-target="certifications" data-cmd="cat ~/.certs">
+              <span class="tnav-index">05</span>
+              <span class="tnav-arrow">→</span>
+              <span class="tnav-text">cat <span class="tnav-file">~/.certs</span></span>
+              <span class="tnav-desc">— Certifications</span>
+            </div>
+            <div class="tnav-cmd" data-target="contact" data-cmd="./contact_me.sh">
+              <span class="tnav-index">06</span>
+              <span class="tnav-arrow">→</span>
+              <span class="tnav-text">./<span class="tnav-file">contact_me.sh</span></span>
+              <span class="tnav-desc">— Get in touch</span>
+            </div>
+          </div>
+
+          <!-- Terminal output area -->
+          <div class="tnav-output" id="tnav-output"></div>
+
+          <!-- Interactive input -->
+          <div class="tnav-input-line">
+            <span class="tnav-prompt"><span class="user">kiran</span><span class="at">@</span><span
+                class="host">ubuntu</span>:<span class="dir">~</span>$&nbsp;</span>
+            <input type="text" class="tnav-input" id="tnav-input" placeholder="Type a command..." autocomplete="off"
+              spellcheck="false" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <p class="section-label reveal"><span>&gt;</span> section --about</p>
+      <h2 class="section-title reveal">About <span class="hl">Me</span></h2>
+      <p class="section-subtitle reveal"># whoami — get to know the developer</p>
+
+      <div class="about-grid">
+        <!-- Left: Terminal card -->
+        <div class="about-terminal terminal-window reveal">
+          <div class="terminal-header">
+            <div class="terminal-dot red"></div>
+            <div class="terminal-dot yellow"></div>
+            <div class="terminal-dot green"></div>
+            <span class="terminal-title">kiran.json</span>
+          </div>
+          <div class="terminal-body">
+            <div class="line"><span class="brace">{</span></div>
+            <div class="line">&nbsp;&nbsp;<span class="key">"name"</span>: <span class="str">"Kiran Siddarth"</span>,
+            </div>
+            <div class="line">&nbsp;&nbsp;<span class="key">"role"</span>: <span class="str">"AI & ML Engineer"</span>,
+            </div>
+            <div class="line">&nbsp;&nbsp;<span class="key">"location"</span>: <span class="str">"Chennai,
+                India"</span>,</div>
+            <div class="line">&nbsp;&nbsp;<span class="key">"education"</span>: <span class="str">"B.Tech AI &
+                ML"</span>,</div>
+            <div class="line">&nbsp;&nbsp;<span class="key">"interests"</span>: [</div>
+            <div class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"LLMs"</span>, <span class="str">"NLP"</span>,
+            </div>
+            <div class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"Transformers"</span>,</div>
+            <div class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"Chatbots"</span></div>
+            <div class="line">&nbsp;&nbsp;],</div>
+            <div class="line">&nbsp;&nbsp;<span class="key">"languages"</span>: [<span class="str">"English"</span>,
+              <span class="str">"Tamil"</span>],
+            </div>
+            <div class="line">&nbsp;&nbsp;<span class="key">"open_to_work"</span>: <span class="bool">true</span></div>
+            <div class="line"><span class="brace">}</span></div>
+          </div>
+        </div>
+
+        <!-- Right: Text -->
+        <div class="about-right reveal">
+          <p>
+            I'm an AI & ML undergraduate at Panimalar Engineering College with hands-on experience building
+            LLM-powered and transformer-based chatbots using Flask and external APIs. Strong in Python,
+            NLP pipelines, and model evaluation.
+          </p>
+          <p>
+            I'm passionate about creating production-ready intelligent systems that solve real-world problems,
+            and I'm seeking an entry-level AI / Software role to turn that passion into impact.
+          </p>
+
+          <div class="about-info-grid">
+            <div class="about-info-item">
+              <div class="about-info-label">$ whoami</div>
+              <div class="about-info-value">Kiran Siddarth</div>
+            </div>
+            <div class="about-info-item">
+              <div class="about-info-label">$ pwd</div>
+              <div class="about-info-value">Chennai, India</div>
+            </div>
+            <div class="about-info-item">
+              <div class="about-info-label">$ cat degree</div>
+              <div class="about-info-value">B.Tech AI & ML</div>
+            </div>
+            <div class="about-info-item">
+              <div class="about-info-label">$ echo $STATUS</div>
+              <div class="about-info-value" style="color: var(--accent);">Open to Work ●</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <p class="section-label reveal"><span>&gt;</span> section --skills</p>
+      <h2 class="section-title reveal">Technical <span class="hl">Skills</span></h2>
+      <p class="section-subtitle reveal"># pip list — technologies in my toolkit</p>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <span class="skill-card-icon">💻</span>
+            <h3 class="skill-card-title">languages/</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <span class="skill-card-icon">🔧</span>
+            <h3 class="skill-card-title">frameworks_tools/</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Jupyter</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <span class="skill-card-icon">🤖</span>
+            <h3 class="skill-card-title">ai_ml/</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">HuggingFace</span>
+            <span class="skill-tag">Gemini API</span>
+            <span class="skill-tag">Prompt Eng.</span>
+            <span class="skill-tag">Sentiment</span>
+            <span class="skill-tag">Emotion</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <span class="skill-card-icon">📊</span>
+            <h3 class="skill-card-title">data_libs/</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Matplotlib</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <span class="skill-card-icon">🧠</span>
+            <h3 class="skill-card-title">core_concepts/</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">NLP</span>
+            <span class="skill-tag">API Integration</span>
+            <span class="skill-tag">Model Eval</span>
+            <span class="skill-tag">Security</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <span class="skill-card-icon">🔒</span>
+            <h3 class="skill-card-title">cyber_security/</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Network Security</span>
+            <span class="skill-tag">Cryptography</span>
+            <span class="skill-tag">Vulnerability Assessment</span>
+            <span class="skill-tag">Firewalls</span>
+            <span class="skill-tag">Ethical Hacking</span>
+            <span class="skill-tag">Secure Coding</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <p class="section-label reveal"><span>&gt;</span> section --projects</p>
+      <h2 class="section-title reveal">Featured <span class="hl">Projects</span></h2>
+      <p class="section-subtitle reveal"># ls -la ~/projects — things I've built</p>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Sentibee -->
+        <div class="project-card reveal">
+          <div class="project-card-header">
+            <div class="project-card-icon">🐝</div>
+            <div class="project-card-links">
+              <a href="https://sentibee-chatbot-live.onrender.com/" target="_blank" rel="noopener" title="Live Demo">
+                <i data-lucide="external-link" style="width:16px;height:16px"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-date">// July 2025</div>
+            <h3 class="project-card-title">Sentibee – Sentiment Analysis Chatbot</h3>
+            <div class="project-card-desc">
+              <ul>
+                <li>Flask chatbot using Google Gemini API for sentiment detection</li>
+                <li>~86% sentiment classification accuracy</li>
+                <li>Average response time under 2 seconds</li>
+              </ul>
+            </div>
+            <div class="project-card-tech">
+              <span>Python</span><span>Flask</span><span>Gemini</span><span>NLP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: HealHive -->
+        <div class="project-card reveal">
+          <div class="project-card-header">
+            <div class="project-card-icon">🧘</div>
+            <div class="project-card-links"></div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-date">// June 2025</div>
+            <h3 class="project-card-title">HealHive – Emotion Aware Chatbot</h3>
+            <div class="project-card-desc">
+              <ul>
+                <li>Transformer-based emotion classifier with Flask backend</li>
+                <li>84% accuracy and F1-score 0.82</li>
+                <li>YouTube Data API for emotion-based content</li>
+              </ul>
+            </div>
+            <div class="project-card-tech">
+              <span>Transformers</span><span>Flask</span><span>YouTube API</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: SecurePass -->
+        <div class="project-card reveal">
+          <div class="project-card-header">
+            <div class="project-card-icon">🔐</div>
+            <div class="project-card-links">
+              <a href="https://github.com/Kiransid2004/Securepass.git" target="_blank" rel="noopener" title="GitHub">
+                <i data-lucide="github" style="width:16px;height:16px"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-date">// March 2025</div>
+            <h3 class="project-card-title">SecurePass – Password Manager</h3>
+            <div class="project-card-desc">
+              <ul>
+                <li>Python password manager with strong generator</li>
+                <li>Strength validation tested on 100+ passwords</li>
+                <li>Structured secure credential storage</li>
+              </ul>
+            </div>
+            <div class="project-card-tech">
+              <span>Python</span><span>Security</span><span>CLI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Robot -->
+        <div class="project-card reveal">
+          <div class="project-card-header">
+            <div class="project-card-icon">🤖</div>
+            <div class="project-card-links"></div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-date">// April 2025</div>
+            <h3 class="project-card-title">Autonomous Line Following Robot</h3>
+            <div class="project-card-desc">
+              <ul>
+                <li>IR-sensor based line-following with feedback control</li>
+                <li>&gt;95% path tracking accuracy</li>
+                <li>Calibrated sensor thresholds for precision</li>
+              </ul>
+            </div>
+            <div class="project-card-tech">
+              <span>Arduino</span><span>IR Sensors</span><span>Robotics</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION ========== -->
+  <section class="education" id="education">
+    <div class="container">
+      <p class="section-label reveal"><span>&gt;</span> section --education</p>
+      <h2 class="section-title reveal">My <span class="hl">Education</span></h2>
+      <p class="section-subtitle reveal"># git log --oneline — academic journey</p>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2022 – 2026</div>
+            <h3 class="timeline-title">Panimalar Engineering College</h3>
+            <p class="timeline-subtitle">B.Tech – Artificial Intelligence and Machine Learning</p>
+            <p class="timeline-detail">CGPA: 7.02</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2020 – 2022</div>
+            <h3 class="timeline-title">St. Vincent School</h3>
+            <p class="timeline-subtitle">Higher Secondary Education</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICATIONS ========== -->
+  <section class="certifications" id="certifications">
+    <div class="container">
+      <p class="section-label reveal"><span>&gt;</span> section --certifications</p>
+      <h2 class="section-title reveal"><span class="hl">Certifications</span></h2>
+      <p class="section-subtitle reveal"># cat ~/.certs — credentials earned</p>
+
+      <div class="cert-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon">🎓</div>
+          <h3 class="cert-title">Principles of Generative AI</h3>
+          <p class="cert-org">Infosys Springboard</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">🔒</div>
+          <h3 class="cert-title">Cyber Security Fundamentals</h3>
+          <p class="cert-org">NASSCOM</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">📈</div>
+          <h3 class="cert-title">Data Analytics and Visualization</h3>
+          <p class="cert-org">Forage</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">🌐</div>
+          <h3 class="cert-title">Network and Network Security</h3>
+          <p class="cert-org">Prompt Infotech</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <p class="section-label reveal"><span>&gt;</span> section --contact</p>
+      <h2 class="section-title reveal">Get In <span class="hl">Touch</span></h2>
+      <p class="section-subtitle reveal"># echo "Let's connect!" — reach out to me</p>
+
+      <div class="contact-grid">
+        <!-- Left: Contact info -->
+        <div class="reveal">
+          <p class="contact-info-text">
+            I'm currently looking for entry-level opportunities in AI, ML, and software development.
+            Whether you have a question, a project idea, or just want to say hi — feel free to reach out!
+          </p>
+
+          <div class="contact-items">
+            <a href="mailto:kiranselva2004@gmail.com" class="contact-item">
+              <div class="contact-item-icon">
+                <i data-lucide="mail" style="width:18px;height:18px"></i>
+              </div>
+              <div>
+                <div class="contact-item-label">$ mail</div>
+                <div class="contact-item-value">kiranselva2004@gmail.com</div>
+              </div>
+            </a>
+
+            <a href="tel:+919342848440" class="contact-item">
+              <div class="contact-item-icon">
+                <i data-lucide="phone" style="width:18px;height:18px"></i>
+              </div>
+              <div>
+                <div class="contact-item-label">$ phone</div>
+                <div class="contact-item-value">+91-9342848440</div>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/kiran-siddarth-b85b52313" target="_blank" rel="noopener"
+              class="contact-item">
+              <div class="contact-item-icon">
+                <i data-lucide="linkedin" style="width:18px;height:18px"></i>
+              </div>
+              <div>
+                <div class="contact-item-label">$ linkedin</div>
+                <div class="contact-item-value">Kiran Siddarth</div>
+              </div>
+            </a>
+
+            <a href="https://github.com/Kiransid2004" target="_blank" rel="noopener" class="contact-item">
+              <div class="contact-item-icon">
+                <i data-lucide="github" style="width:18px;height:18px"></i>
+              </div>
+              <div>
+                <div class="contact-item-label">$ github</div>
+                <div class="contact-item-value">Kiransid2004</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Contact form -->
+        <div class="reveal">
+          <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="form-name">$ your_name</label>
+              <input type="text" id="form-name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="form-email">$ your_email</label>
+              <input type="email" id="form-email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="form-message">$ message</label>
+              <textarea id="form-message" placeholder="Hi Kiran, I'd like to discuss..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              <i data-lucide="send" style="width:16px;height:16px"></i> ./send_message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-socials">
+        <a href="https://github.com/Kiransid2004" target="_blank" rel="noopener" aria-label="GitHub">
+          <i data-lucide="github" style="width:16px;height:16px"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kiran-siddarth-b85b52313" target="_blank" rel="noopener"
+          aria-label="LinkedIn">
+          <i data-lucide="linkedin" style="width:16px;height:16px"></i>
+        </a>
+        <a href="mailto:kiranselva2004@gmail.com" aria-label="Email">
+          <i data-lucide="mail" style="width:16px;height:16px"></i>
+        </a>
+      </div>
+      <p>&copy; 2025 Kiran Siddarth &mdash; <span class="heart">exit 0</span></p>
+    </div>
+  </footer>
+
+  <!-- ========== SUCCESS POPUP ========== -->
+  <div class="success-overlay" id="success-overlay">
+    <div class="success-modal terminal-window">
+      <div class="terminal-header">
+        <div class="terminal-dot red"></div>
+        <div class="terminal-dot yellow"></div>
+        <div class="terminal-dot green"></div>
+        <span class="terminal-title">kiran@ubuntu: ~/send_message</span>
+      </div>
+      <div class="terminal-body success-body" id="success-body">
+        <!-- Content filled by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+    });
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value;
+      const email = document.getElementById('form-email').value;
+      const message = document.getElementById('form-message').value;
+
+      // Show the hacker success popup
+      showSuccessPopup(name, email, message);
+    }
+
+    function showSuccessPopup(name, email, message) {
+      const overlay = document.getElementById('success-overlay');
+      const body = document.getElementById('success-body');
+
+      const lines = [
+        { text: `$ ./send_message.sh --to="kiran@portfolio"`, cls: 'cmd' },
+        { text: `[+] Establishing secure connection...`, cls: 'info' },
+        { text: `[+] Encrypting payload with AES-256...`, cls: 'info' },
+        { text: `[+] Sender  : ${name}`, cls: 'data' },
+        { text: `[+] Email   : ${email}`, cls: 'data' },
+        { text: `[+] Message : "${message.substring(0, 50)}${message.length > 50 ? '...' : ''}"`, cls: 'data' },
+        { text: `[+] Injecting into mail pipeline...`, cls: 'info' },
+        { text: `[██████████████████████████████] 100%`, cls: 'progress' },
+        { text: ``, cls: '' },
+        { text: `  ╔══════════════════════════════════════╗`, cls: 'border' },
+        { text: `  ║   ✓  MESSAGE SENT SUCCESSFULLY  ✓   ║`, cls: 'success' },
+        { text: `  ║      STATUS: 200 OK · ENCRYPTED     ║`, cls: 'border' },
+        { text: `  ╚══════════════════════════════════════╝`, cls: 'border' },
+        { text: ``, cls: '' },
+        { text: `// Kiran will get back to you soon. 🚀`, cls: 'comment' },
+      ];
+
+      body.innerHTML = '';
+      overlay.classList.add('active');
+
+      // Type each line with delay
+      let delay = 0;
+      lines.forEach((line, i) => {
+        delay += (i < 3 ? 300 : i < 7 ? 200 : 150);
+        setTimeout(() => {
+          const div = document.createElement('div');
+          div.className = `success-line success-${line.cls}`;
+          div.textContent = line.text;
+          body.appendChild(div);
+          body.scrollTop = body.scrollHeight;
+        }, delay);
+      });
+
+      // After all lines, allow closing
+      setTimeout(() => {
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'success-close-btn';
+        closeBtn.textContent = '[ Press to close terminal ]';
+        closeBtn.onclick = () => {
+          overlay.classList.remove('active');
+          document.getElementById('contact-form').reset();
+        };
+        body.appendChild(closeBtn);
+      }, delay + 400);
+    }
+  </script>
+</body>
+
+</html>
