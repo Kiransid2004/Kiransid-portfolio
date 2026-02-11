@@ -646,14 +646,38 @@
       if (window.lucide) lucide.createIcons();
     });
 
-    function handleFormSubmit(e) {
+    const WEB3FORMS_KEY = '804f9758-f8f6-4c01-9595-189bfa8a4428';
+
+    async function handleFormSubmit(e) {
       e.preventDefault();
       const name = document.getElementById('form-name').value;
       const email = document.getElementById('form-email').value;
       const message = document.getElementById('form-message').value;
 
-      // Show the hacker success popup
+      // Show popup and send email in parallel
       showSuccessPopup(name, email, message);
+
+      // Send via Web3Forms API
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_KEY,
+            name: name,
+            email: email,
+            message: message,
+            subject: `Portfolio Contact from ${name}`,
+            from_name: 'Portfolio Terminal'
+          })
+        });
+        const data = await res.json();
+        if (!data.success) {
+          console.error('Web3Forms error:', data);
+        }
+      } catch (err) {
+        console.error('Email send failed:', err);
+      }
     }
 
     function showSuccessPopup(name, email, message) {
